@@ -19,7 +19,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
-
 package mmj
 
 import (
@@ -39,7 +38,6 @@ func NewObj() JsonObj{
 func NewArray() JsonArray{
 	return make(JsonArray, 0)
 }
-
 
 // Set an objet to a specific path by using a concatenated path
 // if path already exist, it will overrid the value
@@ -86,7 +84,7 @@ func (j *JsonArray) String() (string, error){
 
 //Function the is intern to the package and will create the
 //JSON structure inside JSON object
-func (j *JsonObj) setObj(path []string, d interface{}, iteration int){
+func (j *JsonObj) setObj(path []string, d interface{}, iteration int) {
 	if path != nil && len(path) > 0 && iteration < len(path){
 		if iteration < len(path)-1 {
 			key := path[iteration]

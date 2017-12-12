@@ -1,5 +1,10 @@
 # mmj
-JSON Creator library. This library help to easly create JSON dynamicaly without defining the structure at first.
+JSON Creator library. This library helps to easly create JSON dynamicaly.
+
+## To install
+```bash
+go get github.com/mohammadmohebi/mmj
+```
 
 ## Create an object
 ```go

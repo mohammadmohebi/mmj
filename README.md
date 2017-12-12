@@ -3,6 +3,9 @@ JSON Creator library. This library help to easly create JSON dynamicaly without 
 
 ## Create an object
 ```go
+import "go get github.com/mohammadmohebi/mmj"
+
+...
 obj := mmj.NewObj()
 
 obj.SetP("Honda", "car.brand")
@@ -26,6 +29,9 @@ Result
 
 ## Create an array
 ```go
+import "go get github.com/mohammadmohebi/mmj"
+
+...
 arr := mmj.NewArray()
 arr.Append("Honda")
 arr.Append("Toyota")
@@ -43,6 +49,9 @@ Result
 
 ## Insert object inside an object
 ```go
+import "go get github.com/mohammadmohebi/mmj"
+
+...
 articles := mmj.NewObj()
 
 obj := mmj.NewObj()
@@ -69,6 +78,9 @@ Result
 ```
 ## Insert objects inside an array
 ```go
+import "go get github.com/mohammadmohebi/mmj"
+
+...
 articles := mmj.NewArray()
 
 obj := mmj.NewObj()
@@ -104,6 +116,9 @@ Result
 
 ## Insert arrays inside objects
 ```go
+import "go get github.com/mohammadmohebi/mmj"
+
+...
 articles := mmj.NewArray()
 
 obj := mmj.NewObj()

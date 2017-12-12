@@ -3,7 +3,7 @@ JSON Creator library. This library help to easly create JSON dynamicaly without 
 
 ## Create an object
 ```go
-import "go get github.com/mohammadmohebi/mmj"
+import "github.com/mohammadmohebi/mmj"
 
 ...
 obj := mmj.NewObj()
@@ -29,7 +29,7 @@ Result
 
 ## Create an array
 ```go
-import "go get github.com/mohammadmohebi/mmj"
+import "github.com/mohammadmohebi/mmj"
 
 ...
 arr := mmj.NewArray()
@@ -49,7 +49,7 @@ Result
 
 ## Insert object inside an object
 ```go
-import "go get github.com/mohammadmohebi/mmj"
+import "github.com/mohammadmohebi/mmj"
 
 ...
 articles := mmj.NewObj()
@@ -78,7 +78,7 @@ Result
 ```
 ## Insert objects inside an array
 ```go
-import "go get github.com/mohammadmohebi/mmj"
+import "github.com/mohammadmohebi/mmj"
 
 ...
 articles := mmj.NewArray()
@@ -116,7 +116,7 @@ Result
 
 ## Insert arrays inside objects
 ```go
-import "go get github.com/mohammadmohebi/mmj"
+import "github.com/mohammadmohebi/mmj"
 
 ...
 articles := mmj.NewArray()

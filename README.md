@@ -1,8 +1,16 @@
 # mmj
-JSON Creator library. This library help to easly create JSON dynamicaly without defining the structure at first.
+JSON Creator library. This library helps to easly create JSON dynamicaly.
+
+## To install
+```bash
+go get github.com/mohammadmohebi/mmj
+```
 
 ## Create an object
 ```go
+import "github.com/mohammadmohebi/mmj"
+
+...
 obj := mmj.NewObj()
 
 obj.SetP("Honda", "car.brand")
@@ -26,6 +34,9 @@ Result
 
 ## Create an array
 ```go
+import "github.com/mohammadmohebi/mmj"
+
+...
 arr := mmj.NewArray()
 arr.Append("Honda")
 arr.Append("Toyota")
@@ -43,6 +54,9 @@ Result
 
 ## Insert object inside an object
 ```go
+import "github.com/mohammadmohebi/mmj"
+
+...
 articles := mmj.NewObj()
 
 obj := mmj.NewObj()
@@ -69,6 +83,9 @@ Result
 ```
 ## Insert objects inside an array
 ```go
+import "github.com/mohammadmohebi/mmj"
+
+...
 articles := mmj.NewArray()
 
 obj := mmj.NewObj()
@@ -104,6 +121,9 @@ Result
 
 ## Insert arrays inside objects
 ```go
+import "github.com/mohammadmohebi/mmj"
+
+...
 articles := mmj.NewArray()
 
 obj := mmj.NewObj()

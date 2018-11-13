@@ -45,13 +45,13 @@ func NewArray() JsonArray {
 //	ex: path.to.the.object
 //
 //		{
-//			"path": {
-//				"to": {
-//					"the": {
-//						"object":"value"
-//					}
-//				}
-//			}
+//		  "path": {
+//		    "to": {
+//		      "the": {
+//		        "object":"value"
+//		       }
+//		    }
+//		  }
 //		}
 //
 func (j *JsonObj) SetP(obj interface{}, path string) {

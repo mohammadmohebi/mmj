@@ -22,20 +22,20 @@ THE SOFTWARE.
 package mmj
 
 import (
-	"strings"
 	"encoding/json"
+	"strings"
 )
 
 type JsonObj map[string]interface{}
 type JsonArray []interface{}
 
 //Create a new JSON objet
-func NewObj() JsonObj{
+func NewObj() JsonObj {
 	return make(JsonObj)
 }
 
 //Create a new JSON Array
-func NewArray() JsonArray{
+func NewArray() JsonArray {
 	return make(JsonArray, 0)
 }
 
@@ -60,23 +60,36 @@ func (j *JsonObj) SetP(obj interface{}, path string) {
 }
 
 // Do the same thing as SetP, but the path is given as different parameters
-func (j *JsonObj) Set(d interface{}, path... string) {
+func (j *JsonObj) Set(d interface{}, path ...string) {
 	j.setObj(path, d, 0)
 }
 
-//Append an objet to a JSON array
-func (j *JsonArray) Append(o interface{}){
-	*j = append(*j, o)
-}
-
 //Return JSON output as array of bytes
-func (j *JsonArray) Bytes() ([]byte, error){
+func (j *JsonObj) Bytes() ([]byte, error) {
 	b, e := json.Marshal(j)
 	return b, e
 }
 
 //Return JSON output as string
-func (j *JsonArray) String() (string, error){
+func (j *JsonObj) String() (string, error) {
+	b, e := json.Marshal(j)
+	s := string(b[:])
+	return s, e
+}
+
+//Append an objet to a JSON array
+func (j *JsonArray) Append(o interface{}) {
+	*j = append(*j, o)
+}
+
+//Return JSON output as array of bytes
+func (j *JsonArray) Bytes() ([]byte, error) {
+	b, e := json.Marshal(j)
+	return b, e
+}
+
+//Return JSON output as string
+func (j *JsonArray) String() (string, error) {
 	b, e := json.Marshal(j)
 	s := string(b[:])
 	return s, e
@@ -85,7 +98,7 @@ func (j *JsonArray) String() (string, error){
 //Function the is intern to the package and will create the
 //JSON structure inside JSON object
 func (j *JsonObj) setObj(path []string, d interface{}, iteration int) {
-	if path != nil && len(path) > 0 && iteration < len(path){
+	if path != nil && len(path) > 0 && iteration < len(path) {
 		if iteration < len(path)-1 {
 			key := path[iteration]
 			iteration++
